@@ -44,12 +44,8 @@ print(adventures_of_tom_sawyer)
 # task 04
 """ Виведіть, скількі разів у тексті зустрічається літера "h"
 """
-
-i = 0
-for item in adventures_of_tom_sawyer:
-    if item == "h":
-        i += 1
-print(f'\n Text contains letter h {i} times')
+amount_h = adventures_of_tom_sawyer.count('h')
+print(f'\n Text contains letter h {amount_h} times')
 
 # task 05
 """ Виведіть, скільки слів у тексті починається з Великої літери?
