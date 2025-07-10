@@ -26,13 +26,7 @@ people_records = [
 people_records.insert(0, ('Halyna', 'Korotenko', 48, 'Test engineer', 'Kharkiv'))
 
 # 2
-record_1 = people_records[1]
-record_5 = people_records[5]
-people_records.pop(5)
-people_records.insert(5, record_1)
-people_records.pop(1)
-people_records.insert(1, record_5)
-
+people_records[1], people_records[5] = people_records[5], people_records[1]
 for item in people_records:
     print(item)
 
