@@ -40,7 +40,7 @@ print(adventures_of_tom_sawyer)
 
 adventures_of_tom_sawyer_split = adventures_of_tom_sawyer.split()
 for item in adventures_of_tom_sawyer_split:
-    adventures_of_tom_sawyer.join(item+"")
+    adventures_of_tom_sawyer.join(item)
 print(adventures_of_tom_sawyer)
 
 # task 04
