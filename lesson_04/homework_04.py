@@ -38,7 +38,6 @@ print(adventures_of_tom_sawyer)
 """ Зробіть так, щоб у тексті було не більше одного пробілу між словами.
 """
 
-adventures_of_tom_sawyer = adventures_of_tom_sawyer.replace("  ", "")
 adventures_of_tom_sawyer_split = adventures_of_tom_sawyer.split()
 for item in adventures_of_tom_sawyer_split:
     adventures_of_tom_sawyer.join(item+"")
