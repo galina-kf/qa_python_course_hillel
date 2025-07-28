@@ -8,7 +8,7 @@ def get_sum(str):
             sum += int(i)
         print(sum)
     except ValueError:
-        print(f'Cannot get Sum for {i}')
+        print(f'Cannot get Sum for {str}')
     return sum
 
 
