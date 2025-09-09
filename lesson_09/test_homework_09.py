@@ -31,7 +31,7 @@ text_2 = ""
 text_3 = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']
 
 
-class MyTestAboutTextes(unittest.TestCase):
+class MyTestAboutText(unittest.TestCase):
 
     """
     Test 1. - Positive
@@ -102,9 +102,9 @@ class MyTestAboutTextes(unittest.TestCase):
         self.assertNotEqual(index, -1, "The substring is not found")
 
     """
-        Test 6 - Negative
-        The text does not contain the required substring
-        """
+    Test 6 - Negative
+    The text does not contain the required substring
+    """
 
     def test_6_check_text(self):
         print('\n ++++++ Test 6 +++++++')

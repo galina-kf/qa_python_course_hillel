@@ -69,7 +69,7 @@ people_records = [
 ]
 
 
-class MyTestClass2(unittest.TestCase):
+class MyTestAboutDict(unittest.TestCase):
 
     """
     Test 1 - Positive
@@ -133,9 +133,10 @@ class MyTestClass2(unittest.TestCase):
         assert len(result) != 0, "List of workers is empty"
 
     """
-        Test 5 - Negative
-        Check that filtered result is empty for invalid param
-        """
+    Test 5 - Negative
+    Check that filtered result is empty for invalid param
+    """
+
     def test_5_workers(self):
         print('\n ++++++ Test 5 +++++++')
         param = 100

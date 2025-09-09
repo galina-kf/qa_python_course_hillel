@@ -33,12 +33,6 @@ def get_word_in_text(text, word):
         return 'Invalid data in the tested file'
     return item_index
 
-empty_text = ''
-print(len(empty_text))
-print(type(empty_text))
-
-#print(get_word_in_test(my_text, 'Tom'))
-
 
 def count_word(text, word):
     amount = 0
@@ -48,14 +42,12 @@ def count_word(text, word):
         print('Invalid data in the tested text')
     return amount
 
-#print(count_word(my_text, 'Tom'))
-print(count_word(empty_text, 'Tom'))
 
-list = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']
+my_list = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']
 
 
-def get_elem_type(list, type):
-    new_list = [i for i in list if type(i) == type]
+def get_elem_type(my_list, type):
+    new_list = [i for i in my_list if type(i) == type]
     print(new_list)
 
 
@@ -100,6 +92,7 @@ car_data = {
   'Ford F-Series': ('gray', 2021, 3.5, 'pickup', 50000),
   'Nissan Titan': ('silver', 2018, 5.6, 'pickup', 35000)
 }
+
 search_criteria = (2017, 1.6, 36000)
 
 
@@ -116,14 +109,6 @@ def car_search(car_data, search_criteria, search_length):
     for item in sorted_car_search[:search_length]:
         print(item)
     return search_result
-
-result = car_search(car_data, search_criteria, search_length=3)
-i = 1
-
-print('+'*20)
-print(result[0][1][1])
-#print(result[1])
-
 
 
 people_records = [
@@ -150,19 +135,10 @@ def get_workers_list(check_items, param):
     print(f'The required people\'s with required age {param}: \n{new_list}')
     return new_list
 
+
 def find_substring(str1, str2):
     index = str1.find(str2)
     if index is not None:
         return index
     else:
         return -1
-
-
-str1 = "Hello, world!"
-str2 = "world"
-print(find_substring(str1, str2))  # поверне 7
-
-
-str1 = "The quick brown fox jumps over the lazy dog"
-str2 = "cat"
-print(find_substring(str1, str2))  # поверне -1
