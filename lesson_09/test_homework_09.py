@@ -43,9 +43,6 @@ class MyTestAboutText(unittest.TestCase):
         word = 'Tom'
         amount = count_word(text, word)
         self.assertNotEqual(amount, 0, "The demanded word is not found in the text")
-        words_place = get_word_in_text(text, word)
-        print(words_place)
-        self.assertNotEqual(words_place, [], "List of Index in the text is empty")
 
     """
     Test 2 - Word not present
@@ -113,6 +110,31 @@ class MyTestAboutText(unittest.TestCase):
         index = find_substring(text, substr)
         print(index)
         self.assertEqual(index, -1, "The substring is not in the text ")
+
+    """
+    Text 7 - positive
+    Find the given word in the text
+    """
+    def test_7_check_word_in_text(self):
+        print('\n ++++++ Test 7 +++++++')
+        text = text_1
+        word = 'Tom'
+        words_place = get_word_in_text(text, word)
+        print(words_place)
+        self.assertNotEqual(words_place, [], "List of Index in the text is empty")
+
+    """
+    Text 8 - negative
+    The given word should not be found in the text
+    """
+
+    def test_8_check_word_in_text(self):
+        print('\n ++++++ Test 8 +++++++')
+        text = text_1
+        word = 'Python'
+        words_place = get_word_in_text(text, word)
+        print(words_place)
+        self.assertEqual(words_place, [], "List of Index in the text is empty")
 
 
 if __name__ ==('__main__'):
