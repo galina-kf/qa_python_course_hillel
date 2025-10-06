@@ -14,7 +14,7 @@ def test_tracking_number(driver):
     np_page = TrackingPage(driver)
     np_page.open_page()
 
-    tr_number = 59001466369507
+    tr_number = 59001469231545
     np_page.start_search(tr_number=tr_number)
 
     # step to close info when user comes to the page at first time

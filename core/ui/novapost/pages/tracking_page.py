@@ -1,5 +1,6 @@
 from qa_python_cource_hillel.core.ui.novapost.locators.tracking_page_locators import TrackingPageLocators
 from .base_page import BasePage
+from selenium.common.exceptions import TimeoutException
 
 
 class TrackingPage(BasePage):
@@ -29,8 +30,11 @@ class TrackingPage(BasePage):
         self._submit_btn().click()
 
     def check_first_visit_info(self):
-        if self.first_visit_info:
+        try:
+            self.first_visit_info()
             self.first_visit_info().click()
+        except TimeoutException as e:
+            print(f'"First visit info is absent {e}"')
 
     def get_status(self):
         if self._status_text():
