@@ -3,12 +3,12 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .base_page import BasePage
 from ..locators.login_page_locators import LoginPageLocators
-
+from qa_python_cource_hillel.settings import settings
 
 class LoginPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver=driver)
-        self.url = "https://www.saucedemo.com/"
+        self.url = 'https://www.saucedemo.com'
         self.locators = LoginPageLocators
 
     def _user_input(self):
