@@ -13,7 +13,9 @@ def driver():
 
 @pytest.fixture
 def login_page(driver):
-    return LoginPage(driver)
+    login_page=LoginPage(driver)
+    login_page.open_page()
+    return login_page
 
 
 @pytest.fixture

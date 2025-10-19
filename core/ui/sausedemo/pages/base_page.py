@@ -21,3 +21,9 @@ class BasePage:
         return WebDriverWait(self.driver, timeout=5). \
             until(EC.presence_of_all_elements_located(locator))
 
+    def _text(self, locator, text):
+        return WebDriverWait(self.driver, timeout=5).until(EC.text_to_be_present_in_element(locator, text))
+
+    def _present_elements(self, locator):
+        return WebDriverWait(self.driver, timeout=5).until(EC.presence_of_all_elements_located(locator))
+

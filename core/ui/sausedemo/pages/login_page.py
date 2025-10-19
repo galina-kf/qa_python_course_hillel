@@ -20,6 +20,13 @@ class LoginPage(BasePage):
     def _login_button(self):
         return self._button(self.locators.login_button)
 
+    def _error_h3_text(self):
+        return self._text(self.locators.error_text_elem,
+                          text="Epic sadface: Username and password do not match any user in this service")
+
+    def error_crosses(self):
+        return self._present_elements(self.locators.error_cross)
+
     def set_user_name(self, user_name):
         self._user_input().send_keys(user_name)
         return self
@@ -35,4 +42,6 @@ class LoginPage(BasePage):
     def login_user(self, user_name, password):
         self.set_user_name(user_name).set_password(password).click_login()
         return self
+
+
 
