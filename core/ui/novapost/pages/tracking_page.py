@@ -1,4 +1,4 @@
-from qa_python_cource_hillel.core.ui.novapost.locators.tracking_page_locators import TrackingPageLocators
+from core.ui.novapost.locators.tracking_page_locators import TrackingPageLocators
 from .base_page import BasePage
 from selenium.common.exceptions import TimeoutException
 
